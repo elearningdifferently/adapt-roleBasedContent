@@ -1,0 +1,14 @@
+// to be added to a contentObject, article or block:
+"_roleBasedContent": {
+    "_excludeForRoles": [
+        "role-1"
+    ]
+}
+
+// to be added to course.json:
+"_roleBasedContent": {
+    "_showChangeRoleButton": true,
+    "buttonLabel": "Return to role selector",
+    "buttonAriaLabel": "",
+    "_roleSelectorID": "c-01"
+}

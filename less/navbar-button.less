@@ -1,0 +1,30 @@
+// default should variable not be supported by theme
+@body-family: Arial, "Helvetica Neue", Helvetica, sans-serif; 
+
+.nav {
+  &__role-btn {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: top;
+  }
+
+  &__role-btn .icon {
+    .icon-controls-small-left;
+  }
+
+  &__role-btn-label {
+    font-family: @body-family;
+    font-size: 0.875rem;
+    line-height: 1;
+    margin-left: 0.5rem;
+
+    .dir-rtl & {
+      margin-left: initial;
+      margin-right: 0.5rem;
+    }
+
+    @media all and (max-width: 520px) {
+      display: none;
+    }
+  }
+}

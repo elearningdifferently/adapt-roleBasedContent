@@ -1,0 +1,117 @@
+{
+    "type": "object",
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "id": "http://jsonschema.net",
+    "properties": {
+        "pluginLocations": {
+            "type": "object",
+            "properties": {
+                "config": {
+                    "type": "object",
+                    "properties": {}
+                },
+                "course": {
+                    "type": "object",
+                    "properties": {
+                        "_roleBasedContent": {
+                            "type": "object",
+                            "legend": "Role Based Content",
+                            "properties": {
+                                "_showChangeRoleButton": {
+                                    "type": "boolean",
+                                    "required": true,
+                                    "default": true,
+                                    "title": "Show change role button?",
+                                    "inputType": "Checkbox",
+                                    "validators": []
+                                },
+                                "buttonLabel": {
+                                    "type": "string",
+                                    "default": "Return to role selector",
+                                    "required": false,
+                                    "title": "Button label",
+                                    "inputType": "Text",
+                                    "translatable": true
+                                },
+                                "buttonAriaLabel": {
+                                    "type": "string",
+                                    "default": "",
+                                    "required": false,
+                                    "title": "Button ARIA label",
+                                    "inputType": "Text",
+                                    "help": "ARIA label for the button (only needs to be set if you don't set 'Button label' i.e. you want an icon-only button)",
+                                    "translatable": true
+                                },
+                                "_roleSelectorID": {
+                                    "type": "string",
+                                    "default": "",
+                                    "title": "Role selector component ID",
+                                    "required": false,
+                                    "inputType": "Text",
+                                    "help": "ID of the role selector component - or of the page/article/block containing it. Leave blank to have the learner be returned to the course's start page."
+                                }
+                            }
+                        }
+                    }
+                },
+                "contentobject": {
+                    "type": "object",
+                    "properties": {
+                        "_roleBasedContent": {
+                            "type": "object",
+                            "required": false,
+                            "legend": "Role Based Content",
+                            "properties": {
+                                "_excludeForRoles": {
+                                    "type": "array",
+                                    "default": [],
+                                    "title": "Hide for role(s)",
+                                    "inputType": "List",
+                                    "help": "List the ids of the roles you want this to be hidden from"
+                                }
+                            }
+                        }
+                    }
+                },
+                "article": {
+                    "type": "object",
+                    "properties": {
+                        "_roleBasedContent": {
+                            "type": "object",
+                            "required": false,
+                            "legend": "Role Based Content",
+                            "properties": {
+                                "_excludeForRoles": {
+                                    "type": "array",
+                                    "default": [],
+                                    "title": "Hide for role(s)",
+                                    "inputType": "List",
+                                    "help": "List the ids of the roles you want this to be hidden from"
+                                }
+                            }
+                        }
+                    }
+                },
+                "block": {
+                    "type": "object",
+                    "properties": {
+                        "_roleBasedContent": {
+                            "type": "object",
+                            "required": false,
+                            "legend": "Role Based Content",
+                            "properties": {
+                                "_excludeForRoles": {
+                                    "type": "array",
+                                    "default": [],
+                                    "title": "Hide for role(s)",
+                                    "inputType": "List",
+                                    "help": "List the ids of the roles you want this to be hidden from"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
